@@ -1,0 +1,11 @@
+services:
+  scraper:
+    network_mode: host
+    build:
+      context: .
+    env_file: .env
+    logging:
+      driver: local
+      options:
+        max-file: "10"
+        max-size: "100m"

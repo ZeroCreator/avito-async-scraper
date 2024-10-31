@@ -1,0 +1,23 @@
+[project]
+name = "avito-scraper"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "ShkolaOlga", email = "shkola.olga@gmail.com" }
+]
+dependencies = [
+    "psycopg[binary]>=3.2.3",
+    "xlsxwriter>=3.2.0",
+    "requests>=2.32.3",
+    "bs4>=0.0.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
+
+[tool.rye.scripts]
+scraper = { cmd = "python avito_scraper/main.py", env-file = ".env" }
